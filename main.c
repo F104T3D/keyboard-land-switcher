@@ -23,8 +23,9 @@ LRESULT CALLBACK KeyboardProc(int nCode, WPARAM wParam, LPARAM lParam) {
     if (nCode == HC_ACTION && wParam == WM_KEYDOWN) {
         KBDLLHOOKSTRUCT *p = (KBDLLHOOKSTRUCT *)lParam;
 
-        if (p->vkCode == VK_OEM_6) {  // "]" key
+        if (p->vkCode == VK_OEM_6) {
             ToggleLayout();
+            
         }
     }
     return CallNextHookEx(NULL, nCode, wParam, lParam);
