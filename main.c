@@ -45,7 +45,7 @@ int main() {
         return 1;
     }
 
-    printf("] switch layouts. ctrl+c exit.\n");
+    printf("switch layouts. ctrl+c exit.\n");
 
     while (GetMessage(&msg, NULL, 0, 0)) {
         TranslateMessage(&msg);
